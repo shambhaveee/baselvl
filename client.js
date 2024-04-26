@@ -3,7 +3,7 @@ const socket = io('http://localhost:8000' || process.env.PORT);
 const form = document.getElementById("send-container");
 const messageInput = document.getElementById('mssg');
 const messageContainer = document.querySelector(".container");
-var audio = new Audio('assets/sound.mp3');
+var audio = new Audio('sound.mp3');
 var groupPublicKey; // store the group's public key
 var uprivateKey; // store the user's private key
 
