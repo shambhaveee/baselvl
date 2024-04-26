@@ -1,7 +1,7 @@
 body::before{
     height: 100vh;
     background-color: antiquewhite;
-    background-image: url("assest\background.jpeg");
+    background-image: url("background.jpeg");
 }
 
 .heading {
