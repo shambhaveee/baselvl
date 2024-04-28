@@ -4,8 +4,11 @@ const app = express();
 const server = http.createServer(app);
 const io = require('socket.io')(server, {
     transports: ['polling'],
+    cors: {
+        origin: "*",
+        methods: ["GET", "POST"]
+    }
 });
-
 // Your Socket.io logic here...
 
 
