@@ -1,9 +1,7 @@
-const io = require('socket.io')(process.env.PORT||8000, {
-    cors: {
-        origin: "*",
-        methods: ["GET", "POST"]
-    }
+const io = require('socket.io')(httpServer, {
+    transports: ['polling'],
 });
+
 
 // Initialize an empty object to store user data
 let users = {};
