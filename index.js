@@ -1,5 +1,17 @@
-const io = require('socket.io')(httpServer, {
+const http = require('http');
+const express = require('express');
+const app = express();
+const server = http.createServer(app);
+const io = require('socket.io')(server, {
     transports: ['polling'],
+});
+
+// Your Socket.io logic here...
+
+// Start the server
+const PORT = process.env.PORT || 8000;
+server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
 
 
