@@ -1,3 +1,8 @@
+// Import the socket.io library
+const io = require('socket.io-client');
+
+
+// Your remaining client-side code...
 const socket = io(process.env.PORT ? `http://localhost:${process.env.PORT}` : 'http://localhost:8000');
 
 
