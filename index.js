@@ -85,6 +85,11 @@ io.on('connection', socket => {
     });
 });
 
+// Define route to serve index.html
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+});
+
 
 // Start the server
 const PORT = process.env.PORT || 8000;
