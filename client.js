@@ -1,5 +1,3 @@
-// Import the socket.io library
-const io = require('socket.io-client');
 
 
 // Your remaining client-side code...
