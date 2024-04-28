@@ -1,4 +1,5 @@
-const socket = io('http://localhost:8000' || process.env.PORT);
+const socket = io(process.env.PORT ? `http://localhost:${process.env.PORT}` : 'http://localhost:8000');
+
 
 const form = document.getElementById("send-container");
 const messageInput = document.getElementById('mssg');
