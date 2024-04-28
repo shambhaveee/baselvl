@@ -8,11 +8,7 @@ const io = require('socket.io')(server, {
 
 // Your Socket.io logic here...
 
-// Start the server
-const PORT = process.env.PORT || 8000;
-server.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+
 
 
 // Initialize an empty object to store user data
@@ -87,4 +83,11 @@ io.on('connection', socket => {
             delete users[socket.id];
         }
     });
+});
+
+
+// Start the server
+const PORT = process.env.PORT || 8000;
+server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
