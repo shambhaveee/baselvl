@@ -12,7 +12,8 @@ processes using Public Key/Private Key pairs-->
     <title>Chat App</title>
     <!--server-client connection-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.10.0/forge.min.js"></script>
-    <script defer src="http://localhost:${process.env.PORT || 8000}/socket.io/socket.io.js"></script>
+    const socket = io(process.env.PORT ? `http://localhost:${process.env.PORT}` : 'http://localhost:8000');
+
     <script defer src="client.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
