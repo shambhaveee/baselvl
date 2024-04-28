@@ -10,9 +10,12 @@ processes using Public Key/Private Key pairs-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
-    <!--server-client connection-->
+     <!-- Include Socket.IO client library -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script>
+    <!-- Include Forge library for encryption -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.10.0/forge.min.js"></script>
-     <script defer src="http://localhost:${process.env.PORT || 8000}/socket.io/socket.io.js"></script>
+    <!-- Include your client-side JavaScript code -->
+    <script defer src="client.js"></script>
 
     <script defer src="client.js"></script>
     <link rel="stylesheet" href="style.css">
