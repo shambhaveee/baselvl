@@ -85,6 +85,9 @@ io.on('connection', socket => {
     });
 });
 
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
+
 // Define route to serve index.html
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
